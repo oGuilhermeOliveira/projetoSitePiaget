@@ -31,7 +31,7 @@
             line-height: 1.6;
         }
 
-        /* Header */
+       
         header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: white;
@@ -145,7 +145,7 @@
             width: 80%;
         }
 
-        /* Hero Section */
+        
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
                         url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
@@ -219,7 +219,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Sections */
+        
         section {
             padding: 5rem 0;
         }
@@ -255,7 +255,7 @@
             margin: 0 auto;
         }
 
-        /* Pillars */
+        
         .pillars {
             background-color: var(--white);
         }
@@ -312,7 +312,7 @@
             font-size: 1.4rem;
         }
 
-        /* Tips */
+        
         .tips-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -337,7 +337,7 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Footprint Explanation */
+        
         .footprint-explanation {
             background-color: var(--white);
         }
@@ -385,7 +385,7 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Calculator */
+        
         .calculator {
             background-color: var(--background);
             text-align: center;
@@ -445,7 +445,7 @@
             margin-bottom: 1rem;
         }
 
-        /* News */
+        
         .news-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -485,7 +485,7 @@
             margin-bottom: 1rem;
         }
 
-        /* Footer */
+        
         footer {
             background-color: var(--primary-dark);
             color: white;
@@ -551,7 +551,7 @@
             font-size: 0.9rem;
         }
 
-        /* Floating Action Button */
+       
         .fab {
             position: fixed;
             bottom: 30px;
@@ -578,7 +578,7 @@
             box-shadow: 0 6px 25px rgba(76, 175, 80, 0.6);
         }
 
-        /* Custom Scrollbar */
+       
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -596,7 +596,7 @@
             background: var(--primary);
         }
 
-        /* Responsive */
+       
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -641,12 +641,12 @@
     </style>
 </head>
 <body>
-    <!-- Floating Action Button -->
+    
     <div class="fab" onclick="scrollToTop()" title="Voltar ao topo">
         ↑
     </div>
 
-    <!-- Header -->
+    
     <header>
         <div class="container">
             <div class="header-content">
@@ -668,7 +668,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    
     <section class="hero" id="inicio">
         <div class="container">
             <h2>Juntos por um Planeta Sustentável</h2>
@@ -677,7 +677,7 @@
         </div>
     </section>
 
-    <!-- Pilares da Sustentabilidade -->
+    
     <section class="pillars" id="pilares">
         <div class="container">
             <div class="section-title">
@@ -710,7 +710,7 @@
         </div>
     </section>
 
-    <!-- Dicas Práticas -->
+   
     <section id="dicas">
         <div class="container">
             <div class="section-title">
@@ -746,7 +746,7 @@
         </div>
     </section>
 
-    <!-- Explicação sobre Pegada Ecológica -->
+    
     <section class="footprint-explanation" id="pegada">
         <div class="container">
             <div class="section-title">
@@ -803,7 +803,7 @@
         </div>
     </section>
 
-    <!-- Calculadora de Pegada Ecológica -->
+    
     <section class="calculator" id="calculadora">
         <div class="container">
             <div class="section-title">
@@ -845,7 +845,7 @@
         </div>
     </section>
 
-    <!-- Notícias e Atualizações -->
+    
     <section id="noticias">
         <div class="container">
             <div class="section-title">
@@ -881,7 +881,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -931,24 +931,24 @@
     </footer>
 
     <script>
-        // Calculadora de Pegada Ecológica
+       
         document.getElementById('calculate-btn').addEventListener('click', function() {
-            // Obter valores do formulário
+            
             const transport = parseInt(document.getElementById('transport').value) || 0;
             const energy = parseInt(document.getElementById('energy').value) || 0;
             const meals = parseInt(document.getElementById('meals').value) || 0;
             const recycling = parseInt(document.getElementById('recycling').value) || 0;
             
-            // Calcular pegada (fórmula simplificada para demonstração)
+           
             let footprint = (transport * 0.2) + (energy * 0.1) + (meals * 0.5);
             
-            // Ajustar com base na reciclagem
+           
             footprint = footprint * (1 - (recycling / 100));
             
-            // Arredondar para uma casa decimal
+       
             footprint = Math.round(footprint * 10) / 10;
             
-            // Determinar mensagem com base na pegada
+           
             let message = "";
             if (footprint < 5) {
                 message = "Parabéns! Sua pegada ecológica é baixa. Você está fazendo um excelente trabalho para preservar o planeta.";
@@ -958,16 +958,16 @@
                 message = "Sua pegada ecológica é alta. Considere implementar mais práticas sustentáveis no seu dia a dia.";
             }
             
-            // Exibir resultado
+        
             document.getElementById('footprint-value').textContent = `Sua pegada ecológica é ${footprint} toneladas de CO2 por ano.`;
             document.getElementById('footprint-message').textContent = message;
             document.getElementById('result').style.display = 'block';
             
-            // Rolar até o resultado
+        
             document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
         });
 
-        // Função para voltar ao topo
+      
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
@@ -975,7 +975,7 @@
             });
         }
 
-        // Mostrar/ocultar FAB baseado na rolagem
+        
         window.addEventListener('scroll', function() {
             const fab = document.querySelector('.fab');
             if (window.scrollY > 300) {
@@ -985,7 +985,7 @@
             }
         });
 
-        // Navegação suave
+  
         document.querySelectorAll('nav a, .footer-column a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 if (this.getAttribute('href').startsWith('#')) {
@@ -998,7 +998,7 @@
             });
         });
 
-        // Animação de cards ao rolar
+      
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1013,7 +1013,6 @@
             });
         }, observerOptions);
 
-        // Aplicar animação aos cards
         document.querySelectorAll('.pillar-card, .tip-card, .news-card, .factor').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px)';
